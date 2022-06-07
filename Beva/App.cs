@@ -10,7 +10,7 @@ using System.Linq;
 using System.Reflection;
 using System.Windows.Media.Imaging;
 
-namespace Beva // TEST
+namespace Beva
 {
     class App : IExternalApplication
     {
