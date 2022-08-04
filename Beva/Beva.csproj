@@ -119,6 +119,15 @@ if exist "$(AppData)\Autodesk\REVIT\Addins\2023" copy "$(ProjectDir)*.chm" "$(Ap
 if exist "$(AppData)\Autodesk\REVIT\Addins\2023" if not exist "$(AppData)\Autodesk\REVIT\Addins\2023\Images" mkdir "$(AppData)\Autodesk\REVIT\Addins\2023\Images"
 if exist "$(AppData)\Autodesk\REVIT\Addins\2023\Images" copy "$(ProjectDir)Images" "$(AppData)\Autodesk\REVIT\Addins\2023\Images"
 
+
+if exist "$(AppData)\Autodesk\REVIT\Addins\2022" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2022"
+if exist "$(AppData)\Autodesk\REVIT\Addins\2022" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2022"
+if exist "$(AppData)\Autodesk\REVIT\Addins\2022" copy "$(ProjectDir)*.chm" "$(AppData)\Autodesk\REVIT\Addins\2022"
+if exist "$(AppData)\Autodesk\REVIT\Addins\2022" if not exist "$(AppData)\Autodesk\REVIT\Addins\2022\Images" mkdir "$(AppData)\Autodesk\REVIT\Addins\2022\Images"
+if exist "$(AppData)\Autodesk\REVIT\Addins\2022\Images" copy "$(ProjectDir)Images" "$(AppData)\Autodesk\REVIT\Addins\2022\Images"
+
+
+
 if exist "$(AppData)\Autodesk\REVIT\Addins\2021" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2021"
 if exist "$(AppData)\Autodesk\REVIT\Addins\2021" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2021"
 if exist "$(AppData)\Autodesk\REVIT\Addins\2021" copy "$(ProjectDir)*.chm" "$(AppData)\Autodesk\REVIT\Addins\2021"
