@@ -40,19 +40,19 @@
     <StartProgram>$(ProgramW6432)\Autodesk\Revit 2019\Revit.exe</StartProgram>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AdWindows, Version=2018.11.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2020.0.1\lib\net47\AdWindows.dll</HintPath>
+    <Reference Include="AdWindows, Version=4.0.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2023.0.0\lib\net48\AdWindows.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="RevitAPI, Version=20.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2020.0.1\lib\net47\RevitAPI.dll</HintPath>
+    <Reference Include="RevitAPI, Version=23.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2023.0.0\lib\net48\RevitAPI.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
-    <Reference Include="RevitAPIUI, Version=20.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2020.0.1\lib\net47\RevitAPIUI.dll</HintPath>
+    <Reference Include="RevitAPIUI, Version=23.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2023.0.0\lib\net48\RevitAPIUI.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
@@ -61,8 +61,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="UIFramework, Version=20.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2020.0.1\lib\net47\UIFramework.dll</HintPath>
+    <Reference Include="UIFramework, Version=23.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2023.0.0\lib\net48\UIFramework.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
