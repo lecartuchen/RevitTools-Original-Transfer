@@ -202,6 +202,7 @@ namespace Beva.Commands
 
                 XYZ normal = XYZ.BasisZ;
                 bool structural = false;
+                // Check Floor Creation for this version of the Revit API
                 Floor floor = createDoc.NewFloor(profile, floorType, levelBottom, structural, normal);
 
                 Parameter pFloor = floor.get_Parameter(BuiltInParameter.FLOOR_ATTR_THICKNESS_PARAM);
