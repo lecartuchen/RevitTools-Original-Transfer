@@ -237,8 +237,8 @@ namespace Beva.Forms
                 AllowedValues = allowValue
             };
 
-            // return UnitFormatUtils.TryParse(units, UnitType.UT_Length, stringToParse, valueParsingOptions, out value); 2014
-            return UnitFormatUtils.TryParse(units, SpecTypeId.Length, stringToParse, out value);
+            return UnitFormatUtils.TryParse(units, UnitType.UT_Length, stringToParse, valueParsingOptions, out value);
+            // return UnitFormatUtils.TryParse(units, SpecTypeId.Length, stringToParse, out value);
         }
     }
 }

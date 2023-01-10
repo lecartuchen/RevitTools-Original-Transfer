@@ -185,14 +185,14 @@ namespace Beva.Commands
                 corners[2] += w * (XYZ.BasisX + XYZ.BasisY);
                 corners[3] += w * (XYZ.BasisX - XYZ.BasisY);
 
-                // CurveArray profile = new CurveArray(); 2014
-                CurveLoop profile = new CurveLoop();
+                CurveArray profile = new CurveArray();
+                // CurveLoop profile = new CurveLoop();
                 for (int i = 0; i < 4; ++i)
                 {
                     Line line = Line.CreateBound( // 2014
                       corners[i], corners[3 == i ? 0 : i + 1]);
 
-                    profile.Append(line);
+                    profile.Append(line as Curve);
                 }
 
                 List<Element> floorTypes = new List<Element>(Utils.GetElementsOfType(doc, typeof(FloorType), BuiltInCategory.OST_Floors));
@@ -200,13 +200,13 @@ namespace Beva.Commands
                 Debug.Assert(0 < floorTypes.Count, "expected at least one floor type" + " to be loaded into project");
 
                 FloorType floorType = floorTypes.Cast<FloorType>().FirstOrDefault();
-                ElementId floorTypeId = Floor.GetDefaultFloorType(doc, false);
+                // ElementId floorTypeId = Floor.GetDefaultFloorType(doc, false);
 
                 XYZ normal = XYZ.BasisZ;
                 bool structural = false;
                 // Check Floor Creation for this version of the Revit API
-                // Floor floor = createDoc.NewFloor(profile, floorType, levelBottom, structural, normal); 2014
-                Floor floor = Floor.Create(doc, new List<CurveLoop> { profile }, floorTypeId, levelBottom.Id);
+                Floor floor = createDoc.NewFloor(profile, floorType, levelBottom, structural, normal);
+                // Floor floor = Floor.Create(doc, new List<CurveLoop> { profile }, floorTypeId, levelBottom.Id);
 
                 Parameter pFloor = floor.get_Parameter(BuiltInParameter.FLOOR_ATTR_THICKNESS_PARAM);
                 GlobalData.HeightFloor = pFloor.AsDouble();

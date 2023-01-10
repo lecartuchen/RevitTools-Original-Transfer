@@ -40,19 +40,19 @@
     <StartProgram>$(ProgramW6432)\Autodesk\Revit 2019\Revit.exe</StartProgram>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="AdWindows, Version=4.0.0.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2023.0.0\lib\net48\AdWindows.dll</HintPath>
+    <Reference Include="AdWindows, Version=2018.11.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2020.0.1\lib\net47\AdWindows.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
     <Reference Include="PresentationCore" />
-    <Reference Include="RevitAPI, Version=23.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2023.0.0\lib\net48\RevitAPI.dll</HintPath>
+    <Reference Include="RevitAPI, Version=20.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2020.0.1\lib\net47\RevitAPI.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
-    <Reference Include="RevitAPIUI, Version=23.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2023.0.0\lib\net48\RevitAPIUI.dll</HintPath>
+    <Reference Include="RevitAPIUI, Version=20.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2020.0.1\lib\net47\RevitAPIUI.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
@@ -61,8 +61,8 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
-    <Reference Include="UIFramework, Version=23.0.0.0, Culture=neutral, processorArchitecture=AMD64">
-      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2023.0.0\lib\net48\UIFramework.dll</HintPath>
+    <Reference Include="UIFramework, Version=20.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <HintPath>..\packages\Revit_All_Main_Versions_API_x64.2020.0.1\lib\net47\UIFramework.dll</HintPath>
       <SpecificVersion>False</SpecificVersion>
       <Private>False</Private>
     </Reference>
@@ -113,26 +113,11 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>if exist "$(AppData)\Autodesk\REVIT\Addins\2023" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2023"
-if exist "$(AppData)\Autodesk\REVIT\Addins\2023" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2023"
-if exist "$(AppData)\Autodesk\REVIT\Addins\2023" copy "$(ProjectDir)*.chm" "$(AppData)\Autodesk\REVIT\Addins\2023"
-if exist "$(AppData)\Autodesk\REVIT\Addins\2023" if not exist "$(AppData)\Autodesk\REVIT\Addins\2023\Images" mkdir "$(AppData)\Autodesk\REVIT\Addins\2023\Images"
-if exist "$(AppData)\Autodesk\REVIT\Addins\2023\Images" copy "$(ProjectDir)Images" "$(AppData)\Autodesk\REVIT\Addins\2023\Images"
-
-
-if exist "$(AppData)\Autodesk\REVIT\Addins\2022" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2022"
-if exist "$(AppData)\Autodesk\REVIT\Addins\2022" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2022"
-if exist "$(AppData)\Autodesk\REVIT\Addins\2022" copy "$(ProjectDir)*.chm" "$(AppData)\Autodesk\REVIT\Addins\2022"
-if exist "$(AppData)\Autodesk\REVIT\Addins\2022" if not exist "$(AppData)\Autodesk\REVIT\Addins\2022\Images" mkdir "$(AppData)\Autodesk\REVIT\Addins\2022\Images"
-if exist "$(AppData)\Autodesk\REVIT\Addins\2022\Images" copy "$(ProjectDir)Images" "$(AppData)\Autodesk\REVIT\Addins\2022\Images"
-
-
-
-if exist "$(AppData)\Autodesk\REVIT\Addins\2021" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2021"
-if exist "$(AppData)\Autodesk\REVIT\Addins\2021" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2021"
-if exist "$(AppData)\Autodesk\REVIT\Addins\2021" copy "$(ProjectDir)*.chm" "$(AppData)\Autodesk\REVIT\Addins\2021"
-if exist "$(AppData)\Autodesk\REVIT\Addins\2021" if not exist "$(AppData)\Autodesk\REVIT\Addins\2021\Images" mkdir "$(AppData)\Autodesk\REVIT\Addins\2021\Images"
-if exist "$(AppData)\Autodesk\REVIT\Addins\2021\Images" copy "$(ProjectDir)Images" "$(AppData)\Autodesk\REVIT\Addins\2021\Images"</PostBuildEvent>
+    <PostBuildEvent>if exist "$(AppData)\Autodesk\REVIT\Addins\2020" copy "$(ProjectDir)*.addin" "$(AppData)\Autodesk\REVIT\Addins\2020"
+if exist "$(AppData)\Autodesk\REVIT\Addins\2020" copy "$(ProjectDir)$(OutputPath)*.dll" "$(AppData)\Autodesk\REVIT\Addins\2020"
+if exist "$(AppData)\Autodesk\REVIT\Addins\2020" copy "$(ProjectDir)*.chm" "$(AppData)\Autodesk\REVIT\Addins\2020"
+if exist "$(AppData)\Autodesk\REVIT\Addins\2020" if not exist "$(AppData)\Autodesk\REVIT\Addins\2020\Images" mkdir "$(AppData)\Autodesk\REVIT\Addins\2020\Images"
+if exist "$(AppData)\Autodesk\REVIT\Addins\2020\Images" copy "$(ProjectDir)Images" "$(AppData)\Autodesk\REVIT\Addins\2020\Images"</PostBuildEvent>
   </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
        Other similar extension points exist, see Microsoft.Common.targets.
